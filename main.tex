@@ -1,0 +1,234 @@
+\documentclass[a4paper]{modernsimplecv}
+% try out different fonts: classic, fira, raleway, chivo
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5cm, a4paper]{geometry}
+\usepackage{fontspec}
+\usepackage{enumitem}
+
+%------- Colors
+\definecolor{teal}{RGB}{0, 128, 128}
+
+% ------------------------------------------------------------------------------------
+% you can try out different fonts here by commenting the following lines in and out
+% -----------------------------------------------------------------------------------
+%\usepackage[default]{raleway}
+%\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}\normalfont
+%\usepackage[familydefault,light]{Chivo} 
+%\usepackage[sfdefault,light,condensed]{roboto}
+%\usepackage[default]{cantarell}
+%\usepackage[sfdefault]{AlegreyaSans}
+
+
+\newfontfamily\FocusFont{FiraSans}[]
+\setmainfont{montserrat} % or some other suitable font
+\urlstyle{same}
+
+\DeclareTextFontCommand{\textFocus}{\Large\FocusFont\bfseries\color{teal}}
+%------------------------------------------------------------------
+\title{Azeez's Resume}
+\author{\LaTeX{} Azeez}
+\date{December 2020}
+
+\pagestyle{empty}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\begin{document}
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\tikz[remember picture,overlay] {%
+\node[rectangle, fill=white, anchor=north, minimum width=\paperwidth, minimum height=0cm](header) at (current page.north){};%
+}
+
+\begin{minipage}[t]{1.0\textwidth}
+    \begin{shaded*}
+        \Huge
+        \begin{minipage}[t]{\textwidth}
+            \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
+            \raisebox{.3ex}{\Large$\cdot$ Aspiring Graphics and Computer Vision Engineer}
+        \end{minipage}
+        \vspace{10pt}
+        \footnotesize
+        \begin{minipage}[t]{0.33\textwidth}
+            \vspace{0pt} % Trick for alignment
+            \faPhone~ +1 780 720 4606 \\
+            \faAt~ \url{aabass@ualberta.ca} \\
+        \end{minipage}
+        \begin{minipage}[t]{0.33\textwidth}
+            \vspace{0pt} % Trick for alignment
+            \faGlobe~ \url{https://azeez.me/} \\
+            \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
+        \end{minipage}
+        \begin{minipage}[t]{0.33\textwidth}
+            \vspace{0pt} % Trick for alignment
+            \faGithub~ \url{https://github.com/ducklin5/} \\
+            \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
+        \end{minipage}
+        \vspace{-2em}
+    \end{shaded*}
+\end{minipage}\\
+
+%------------------------------------------------------------------ Variablen
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.485\textwidth}
+\setlength{\rightcolwidth}{0.485\textwidth}
+
+\newlist{tabitemize}{itemize}{1}
+\setlist[tabitemize]{leftmargin=*,itemindent=0pt,label={\guillemotright}, topsep=0pt}
+
+%------------------------------------------------
+\subsection*{}
+\vspace{-4em}
+
+\setlength{\columnsep}{0.03\textwidth}
+\small
+\begin{paracol}{2}
+    \begin{minipage}[t]{\leftcolwidth}
+        \vspace{1em}
+        \section*{\textFocus{Education}}
+        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+            \cvdegree
+                {2017--2022}
+                {Computer Engineering \newline (Software Option) Coop}
+                {B.Sc.}
+                {University of Alberta}
+                {
+                    \begin{tabitemize}
+                    \item Completed Academic Terms: 7 of 8
+                    \item Completed Co-op Work Terms: 2
+                    \item Availablity from May 2021: 4 or 8 months
+                    \end{tabitemize}
+                }\\
+        \end{tabular}
+
+        \vspace{-2pt}
+        \section*{\textFocus{Work Experience}}
+        
+        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+            \cvevent{Jan 2020\newline --Aug 2020}
+                {Software Developer Co-op}
+                {Intuit}{Edmonton}
+                {\begin{tabitemize}
+                    \item Implemented enhancements to the navigational accessibility of QuickBooks Online to allow keyboard only navigation for all 4 million+ customers
+                    \item Rebuilt legacy Dojo-based components with React (Javascript) to modernize a shortcut modal, improving its accessibility and load speed in the process
+                    \item Led Navigation team stand-up meetings and collaborated to solve up to 50 significant accessibility issues
+                \end{tabitemize}   
+                }\\ 
+            \cvevent{Jun 2016\newline --Aug 2016}
+                {IT support intern}
+                {International Institute of Tropical Agriculture}{Ibadan}
+                {\begin{tabitemize}
+                    \item Resolved technical help desk requests by directing support staff to on-site clients
+                    \item Provided technical support by troubleshooting and repairing a variety of computer systems and printers for clients
+                    \item Safely installed/replaced network cables in 2 buildings to optimize network connectivity
+                \end{tabitemize}
+                \vspace{-\baselineskip}\mbox{}
+                }
+        \end{tabular}
+        %\end{shaded*}
+        %\begin{shaded*}
+            %\vspace{-1.5em}
+            %\section*{\textFocus{Relevant Coursework}}
+            %\newcolumntype{C}{>{\centering\arraybackslash}m{0.28\textwidth}}
+            %{\setlength{\extrarowheight}{4pt}%
+            %\begin{tabular}{CCC}
+            %    Calculus & Intro. to Software Engg &  Operating Systems \\
+            %    Linear Algebra & Software Requirements &  Games programing \\
+            %    Optics & Software Testing & Intro. to Tangible Comput. \\ 
+            %\end{tabular}}
+        %\end{shaded*}
+        \vspace{0pt}
+        \section*{\textFocus{Additional Information}}
+        {\raggedright
+        \begin{tabitemize}
+            \item Engineering Safety Course (CSTS) Completed 
+            \item Experience with 3D modeling in Blender and CAD in Fusion 360
+            \item Willing to relocate
+        \end{tabitemize}
+        }
+        \vspace{1em}
+    \end{minipage}
+
+    %-----------------------------------------------------------
+    \switchcolumn
+
+    \begin{minipage}[t]{\rightcolwidth}
+        \vspace{1em}
+        \section*{\textFocus{Software Development Skills}}
+        \begin{minipage}[t]{\textwidth}
+            \raggedright
+            {\normalsize\textbf{Programming Languages:}}\\
+            Proficient: \cvtag{C/C++} \cvtag{Python} 
+            \cvtag{Javascript} \cvtag{Java} \cvtag{GDscript} \\
+            Familiar: \cvtag{MongoDB} \cvtag{SQLite} \cvtag{Assembly}
+            \cvtag{Rust} \cvtag{OpenGL} \cvtag{GLSL} 
+            \cvtag{LaTeX} \\
+            {\normalsize\textbf{Frameworks: }}
+            \cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Mockito}\\
+            {\normalsize\textbf{OS: }}
+            \cvtag{Windows} \cvtag{Arch Linux} \cvtag{Macintosh OS X}
+        \end{minipage}
+
+        \vspace{0pt}
+        \section*{\textFocus{Projects}}
+        \begin{tabular}{@{\raggedright}p{0.09\textwidth} |>{\raggedright\arraybackslash}p{0.8\textwidth}}
+            \cvdegree{2019}{Traitor's Arena}
+                {\faGitlab~ \href{https://gitlab.com/ducklin5/traitors-arena}{traitors-arena}}{GDscript}
+                {
+                    \begin{tabitemize}
+                        \item Developed a multiplayer roguelike shooter using Godot game engine
+                        \item Built and integrated at least 3 core game mechanics including randomized map generation, dynamic actor switching and dynamic teaming
+                        \item Optimized multiplayer performance using entity interpolation and lag compensation algorithms to reduce perceived latency from 50ms to 10ms
+                    \end{tabitemize}
+                }\\
+            \cvdegree{2019}{Sudoku Solver}
+                {\faGithub~ \href{https://github.com/ducklin5/idea3}{idea3}}{C++, OpenCV}
+                {
+                    \begin{tabitemize}
+                        \item Built a custom sudoku solver capable of solving variable sized puzzles
+                        \item Used computer vision techniques to detect sudoku puzzles in images using OpenCV image processing library
+                    \end{tabitemize}
+                }\\
+            \cvdegree{2018}{TweetHeat - Twitter Heat Map}
+            {\faGithub~ \href{https://github.com/HyperEpsilon/Tweet-Heat}{Tweet-Heat}}{JavaScript, Python, Flask}
+                {
+                    \begin{tabitemize}
+                        \item Collaborated in a team of 4 to build a web-based heat map of tweets using Leaflet and the Twitter API
+                        \item Won in Edmonton’s 2018 HackEd Beta Hackathon (20 teams)                        
+                    \end{tabitemize}
+                }\\
+            \cvdegree{2018}{MusicBoard}
+                {\faGithub~ \href{https://github.com/ducklin5/MusicBoard}{MusicBoard}}{C++, Python, PyGame}
+                {
+                    \begin{tabitemize}
+                        \item Collaborated in a team of 2 to design and build a 12 key Arduino piano keyboard 
+                        \item Developed a fully featured audio synthesis engine with Oscillators, Envelopes and Filters using NumPy and PyGame
+                        \item Integrated the Arduino hardware, synthesis engine and UI to construct the final real-time system 
+                    \end{tabitemize}
+                    \vspace{-\baselineskip}\mbox{}
+                }\\
+        
+        \end{tabular}
+    \end{minipage}
+\end{paracol}
+
+\vspace{1em} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\textwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+%{\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
+%\icon{\faAt}{black}{} \protect\url{aabass@ualberta.ca}
+%}
+\end{center}
+\end{minipage}
+
+\end{document}
