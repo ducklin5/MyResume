@@ -1,31 +1,22 @@
 % !TeX TS-program = lualatex
-
 \documentclass[a4paper]{modernsimplecv}
-% try out different fonts: classic, fira, raleway, chivo
+
+%------- Packages
 \usepackage[utf8]{inputenc}
 \usepackage[margin=0.3cm, a4paper]{geometry}
 \usepackage{fontspec}
 \usepackage{enumitem}
+\usepackage{import}
 
 %------- Colors
 \definecolor{teal}{RGB}{0, 128, 128}
 
-% ------------------------------------------------------------------------------------
-% you can try out different fonts here by commenting the following lines in and out
-% -----------------------------------------------------------------------------------
-%\usepackage[default]{raleway}
-%\usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}\normalfont
-%\usepackage[familydefault,light]{Chivo} 
-%\usepackage[sfdefault,light,condensed]{roboto}
-%\usepackage[default]{cantarell}
-%\usepackage[sfdefault]{AlegreyaSans}
-
-
+%------- Fonts
 \newfontfamily\FocusFont{FiraSans}[]
 \setmainfont{montserrat} % or some other suitable font
 \urlstyle{same}
-
 \DeclareTextFontCommand{\textFocus}{\Large\FocusFont\bfseries\color{teal}}
+
 %------------------------------------------------------------------
 \title{Azeez's Resume}
 \author{\LaTeX{} Azeez}
@@ -47,33 +38,7 @@
     }
 
     \vspace{-2em}
-    \begin{minipage}[t]{1.0\textwidth}
-        \begin{shaded*}
-            \Huge
-            \begin{minipage}[t]{\textwidth}
-                \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
-                \raisebox{.3ex}{\Large$\cdot$ Software Engineer $\cdot$ Video Game and Web Developer}
-            \end{minipage}
-            \vspace{10pt}
-            \footnotesize
-            \begin{minipage}[t]{0.33\textwidth}
-                \vspace{0pt} % Trick for alignment
-                \faPhone~ +1 780 720 4606 \\
-                \faAt~ \url{abassazeez6@gmail.com} \\
-            \end{minipage}
-            \begin{minipage}[t]{0.33\textwidth}
-                \vspace{0pt} % Trick for alignment
-                \faGlobe~ \url{https://azeez.me/} \\
-                \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
-            \end{minipage}
-            \begin{minipage}[t]{0.33\textwidth}
-                \vspace{0pt} % Trick for alignment
-                \faGithub~ \url{https://github.com/ducklin5/} \\
-                \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
-            \end{minipage}
-            \vspace{-2em}
-        \end{shaded*}
-    \end{minipage}\\
+    \import{parts}{title}
 
     %------------------------------------------------------------------ Variablen
     \newlength{\rightcolwidth}
@@ -91,136 +56,53 @@
     \setlength{\columnsep}{0.03\textwidth}
     \small
     \begin{paracol}{2}
-
         \begin{minipage}[t]{\rightcolwidth}
-
             \vspace{1em}
-            \section*{\textFocus{Work Experience}}
-
-            \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-                \cvevent{Jun 2022\newline --Sep 2024}
-                {Associate Game Programmer Co-op}
-                {Improbable Canada (Inflexion Games)}{Edmonton}
-                {\begin{tabitemize}
-                    \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
-                    \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
-                    \item Refactored and improved old gameplay logic to meet new player inventory requirements
-                \end{tabitemize}
-                } \\
-
-                \cvevent{May 2021\newline --Dec 2021}
-                {Associate Game Programmer Co-op}
-                {Improbable Canada (Inflexion Games)}{Edmonton}
-                {\begin{tabitemize}
-                    \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
-                    \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
-                    \item Refactored and improved old gameplay logic to meet new player inventory requirements
-                \end{tabitemize}
-                } \\
-                \cvevent{Jan 2020\newline --Aug 2020}
-                {Software Developer Co-op}
-                {Intuit}{Edmonton}
-                {\begin{tabitemize}
-                    \item Implemented enhancements to the navigational accessibility of QuickBooks Online to allow keyboard only navigation for all 4 million+ customers
-                    \item Rebuilt legacy Dojo-based components with React (Javascript) to modernize a shortcut modal, improving its accessibility and load speed in the process
-                    \item Led Navigation team stand-up meetings and collaborated to solve up to 50 significant accessibility issues
-                \end{tabitemize}
-                } \\
-                \cvevent{Jun 2016\newline --Aug 2016}
-                {IT support intern}
-                {International Institute of Tropical Agriculture}{Ibadan}
-                {\begin{tabitemize}
-                    \item Resolved technical help desk requests by directing support staff to on-site clients
-                    \item Provided technical support by troubleshooting and repairing a variety of computer systems and printers for clients
-                    \item Safely installed/replaced network cables in 2 buildings to optimize network connectivity
-                \end{tabitemize}
-                \vspace{-\baselineskip}\mbox{}
-                }
-            \end{tabular}
-            \vspace{1em}
+            \import{parts}{workexp1}
         \end{minipage}
-
         %-----------------------------------------------------------
         \switchcolumn
 
         \begin{minipage}[t]{\leftcolwidth}
             \vspace{1em}
-            \section*{\textFocus{Education}}
-            \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-                \cvdegree
-                {2017--2022}
-                {Computer Engineering \newline (Software Option) Co-op}
-                {B.Sc.}
-                {University of Alberta\newline}
-                {5 year program including 2 internships} \\
-            \end{tabular}
+
+            \import{parts}{education}
 
             \vspace{1em}
-            \section*{\textFocus{Software Development Skills}}
-            \begin{minipage}[t]{\textwidth}
-                \raggedright
-                {\normalsize\textbf{Programming Languages:}}\\
-                Proficient: \cvtag{C/C+}  \cvtag{Python} \cvtag{Javascript} \cvtag{Rust}
-                \cvtag{GDscript} \cvtag{UE4 C++} \cvtag{UE4 Blueprint} \\
-                Familiar: \cvtag{Java} \cvtag{Kotlin} \cvtag{Lua} \cvtag{Assembly} \cvtag{OpenGL} \cvtag{GLSL} \cvtag{LaTeX} \\
-                {\normalsize\textbf{Technologies: }}
-                \cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Godot} \cvtag{Unreal Engine}\\
-            \end{minipage}
+            \import{parts}{devskills}
 
             \vspace{0pt}
-            \section*{\textFocus{Projects}}
-            \begin{tabular}{@{\raggedright}p{0.09\textwidth} |>{\raggedright\arraybackslash}p{0.8\textwidth}}
-                \cvdegree{2019}{Traitor's Arena}
-                {\faGitlab~ \href{https://gitlab.com/ducklin5/traitors-arena}{traitors-arena}}{GDscript}
-                {
-                    \begin{tabitemize}
-                        \item Developed a multiplayer roguelike shooter using Godot game engine
-                        \item Built and integrated at least 3 core game mechanics including randomized map generation, dynamic actor switching and dynamic teaming
-                        \item Optimized multiplayer performance using entity interpolation and lag compensation algorithms to reduce perceived latency from 50ms to 10ms
-                    \end{tabitemize}
-                } \\
-                \cvdegree{2019}{Sudoku Solver}
-                {\faGithub~ \href{https://github.com/ducklin5/idea3}{idea3}}{C++, OpenCV}
-                {
-                    \begin{tabitemize}
-                        \item Built a custom sudoku solver capable of solving variable sized puzzles
-                        \item Used computer vision techniques to detect sudoku puzzles in images using OpenCV image processing library
-                    \end{tabitemize}
-                } \\
-                \cvdegree{2018}{TweetHeat - Twitter Heat Map}
-                {\faGithub~ \href{https://github.com/HyperEpsilon/Tweet-Heat}{Tweet-Heat}}{JavaScript, Python, Flask}
-                {
-                    \begin{tabitemize}
-                        \item Collaborated in a team of 4 to build a web-based heat map of tweets using Leaflet and the Twitter API
-                        \item Won in Edmonton’s 2018 HackEd Beta Hackathon (20 teams)
-                    \end{tabitemize}
-                } \\
-            \end{tabular}
+            \import{parts}{projects}
 
             \vspace{0pt}
-            \section*{\textFocus{Additional Information}}
-            {\raggedright
-            \begin{tabitemize}
-                \item Engineering Safety Course (CSTS) Completed
-                \item Experience with 3D modeling in Blender and CAD in Fusion 360
-                \item Willing to relocate
-            \end{tabitemize}
-            }
+            \import{parts}{additional}
+
         \end{minipage}
 
     \end{paracol}
 
-    \vspace{1em} % Whitespace before final footer
+    \pagebreak
+
+    \begin{minipage}[t]{\textwidth}
+
+        \vspace{1em}
+        \import{parts}{workexp2}
+
+        \vspace{1em}
+    \end{minipage}
+
+
 
     %----------------------------------------------------------------------------------------
     %	FINAL FOOTER
     %----------------------------------------------------------------------------------------
+    \vspace{1em} % Whitespace before final footer
     \setlength{\parindent}{0pt}
     \begin{minipage}[t]{\textwidth}
         \begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-            %{\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
-            %\icon{\faAt}{black}{} \protect\url{aabass@ualberta.ca}
-            %}
+            {\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
+            \icon{\faAt}{black}{} \protect\url{abassazeez6@gmail.com}
+            }
         \end{center}
     \end{minipage}
 
