@@ -3,7 +3,7 @@ once:
 	cp out/main.pdf Azeez_Abass_Resume.pdf
 
 watch:
-	nodemon -w src -x "make once"
+	nodemon -w ./src -e tex,cls,sty -x "make once"
 
 view:
 	evince ./out/main.pdf
