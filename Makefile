@@ -8,6 +8,9 @@ watch:
 view:
 	evince ./out/main.pdf
 
+format:
+	latexindent -l -m -w src/main.tex
+
 readme:
 	grip -b README.md
 

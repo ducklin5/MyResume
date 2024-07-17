@@ -43,91 +43,90 @@
 %-------------------------------------------------------------
 
 \tikz[remember picture,overlay] {%
-\node[rectangle, fill=white, anchor=north, minimum width=\paperwidth, minimum height=0cm](header) at (current page.north){};%
-}
+    \node[rectangle, fill=white, anchor=north, minimum width=\paperwidth, minimum height=0cm](header) at (current page.north){};%
+    }
 
-\vspace{-2em}
-\begin{minipage}[t]{1.0\textwidth}
-\begin{shaded*}
-    \Huge
-    \begin{minipage}[t]{\textwidth}
-        \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
-        \raisebox{.3ex}{\Large$\cdot$ Software Engineer $\cdot$ Video Game and Web Developer}
-    \end{minipage}
-    \vspace{10pt}
-    \footnotesize
-    \begin{minipage}[t]{0.33\textwidth}
-        \vspace{0pt} % Trick for alignment
-        \faPhone~ +1 780 720 4606 \\
-        \faAt~ \url{abassazeez6@gmail.com} \\
-    \end{minipage}
-    \begin{minipage}[t]{0.33\textwidth}
-        \vspace{0pt} % Trick for alignment
-        \faGlobe~ \url{https://azeez.me/} \\
-        \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
-    \end{minipage}
-    \begin{minipage}[t]{0.33\textwidth}
-        \vspace{0pt} % Trick for alignment
-        \faGithub~ \url{https://github.com/ducklin5/} \\
-        \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
-    \end{minipage}
     \vspace{-2em}
-\end{shaded*}
-\end{minipage}\\
+    \begin{minipage}[t]{1.0\textwidth}
+        \begin{shaded*}
+            \Huge
+            \begin{minipage}[t]{\textwidth}
+                \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
+                \raisebox{.3ex}{\Large$\cdot$ Software Engineer $\cdot$ Video Game and Web Developer}
+            \end{minipage}
+            \vspace{10pt}
+            \footnotesize
+            \begin{minipage}[t]{0.33\textwidth}
+                \vspace{0pt} % Trick for alignment
+                \faPhone~ +1 780 720 4606 \\
+                \faAt~ \url{abassazeez6@gmail.com} \\
+            \end{minipage}
+            \begin{minipage}[t]{0.33\textwidth}
+                \vspace{0pt} % Trick for alignment
+                \faGlobe~ \url{https://azeez.me/} \\
+                \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
+            \end{minipage}
+            \begin{minipage}[t]{0.33\textwidth}
+                \vspace{0pt} % Trick for alignment
+                \faGithub~ \url{https://github.com/ducklin5/} \\
+                \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
+            \end{minipage}
+            \vspace{-2em}
+        \end{shaded*}
+    \end{minipage}\\
 
-%------------------------------------------------------------------ Variablen
-\newlength{\rightcolwidth}
-\newlength{\leftcolwidth}
-\setlength{\leftcolwidth}{0.485\textwidth}
-\setlength{\rightcolwidth}{0.485\textwidth}
+    %------------------------------------------------------------------ Variablen
+    \newlength{\rightcolwidth}
+    \newlength{\leftcolwidth}
+    \setlength{\leftcolwidth}{0.485\textwidth}
+    \setlength{\rightcolwidth}{0.485\textwidth}
 
-\newlist{tabitemize}{itemize}{1}
-\setlist[tabitemize]{leftmargin=*,itemindent=0pt,label={\guillemotright}, topsep=0pt}
+    \newlist{tabitemize}{itemize}{1}
+    \setlist[tabitemize]{leftmargin=*,itemindent=0pt,label={\guillemotright}, topsep=0pt}
 
-%------------------------------------------------
-\subsection*{}
-\vspace{-4em}
+    %------------------------------------------------
+    \subsection*{}
+    \vspace{-4em}
 
-\setlength{\columnsep}{0.03\textwidth}
-\small
-\begin{paracol}{2}
-   
+    \setlength{\columnsep}{0.03\textwidth}
+    \small
+    \begin{paracol}{2}
 
-	\begin{minipage}[t]{\rightcolwidth}
-		
-        \vspace{1em}
-        \section*{\textFocus{Work Experience}}
-        
-        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-            \cvevent{Jun 2022\newline --Sep 2024}
+        \begin{minipage}[t]{\rightcolwidth}
+
+            \vspace{1em}
+            \section*{\textFocus{Work Experience}}
+
+            \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+                \cvevent{Jun 2022\newline --Sep 2024}
                 {Associate Game Programmer Co-op}
                 {Improbable Canada (Inflexion Games)}{Edmonton}
                 {\begin{tabitemize}
                     \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
                     \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
                     \item Refactored and improved old gameplay logic to meet new player inventory requirements
-                \end{tabitemize}   
-                }\\
+                \end{tabitemize}
+                } \\
 
-			\cvevent{May 2021\newline --Dec 2021}
+                \cvevent{May 2021\newline --Dec 2021}
                 {Associate Game Programmer Co-op}
                 {Improbable Canada (Inflexion Games)}{Edmonton}
                 {\begin{tabitemize}
                     \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
                     \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
                     \item Refactored and improved old gameplay logic to meet new player inventory requirements
-                \end{tabitemize}   
-                }\\
-            \cvevent{Jan 2020\newline --Aug 2020}
+                \end{tabitemize}
+                } \\
+                \cvevent{Jan 2020\newline --Aug 2020}
                 {Software Developer Co-op}
                 {Intuit}{Edmonton}
                 {\begin{tabitemize}
                     \item Implemented enhancements to the navigational accessibility of QuickBooks Online to allow keyboard only navigation for all 4 million+ customers
                     \item Rebuilt legacy Dojo-based components with React (Javascript) to modernize a shortcut modal, improving its accessibility and load speed in the process
                     \item Led Navigation team stand-up meetings and collaborated to solve up to 50 significant accessibility issues
-                \end{tabitemize}   
-                }\\ 
-            \cvevent{Jun 2016\newline --Aug 2016}
+                \end{tabitemize}
+                } \\
+                \cvevent{Jun 2016\newline --Aug 2016}
                 {IT support intern}
                 {International Institute of Tropical Agriculture}{Ibadan}
                 {\begin{tabitemize}
@@ -137,41 +136,41 @@
                 \end{tabitemize}
                 \vspace{-\baselineskip}\mbox{}
                 }
-        \end{tabular}
-        \vspace{1em}
-	\end{minipage}
-    
-    %-----------------------------------------------------------
-    \switchcolumn
+            \end{tabular}
+            \vspace{1em}
+        \end{minipage}
 
-\begin{minipage}[t]{\leftcolwidth}
-        \vspace{1em}
-        \section*{\textFocus{Education}}
-        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-            \cvdegree
+        %-----------------------------------------------------------
+        \switchcolumn
+
+        \begin{minipage}[t]{\leftcolwidth}
+            \vspace{1em}
+            \section*{\textFocus{Education}}
+            \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+                \cvdegree
                 {2017--2022}
                 {Computer Engineering \newline (Software Option) Co-op}
                 {B.Sc.}
                 {University of Alberta\newline}
-                {5 year program including 2 internships}\\
-        \end{tabular}
+                {5 year program including 2 internships} \\
+            \end{tabular}
 
-        \vspace{1em}
-        \section*{\textFocus{Software Development Skills}}
-        \begin{minipage}[t]{\textwidth}
-            \raggedright
-            {\normalsize\textbf{Programming Languages:}}\\
-            Proficient: \cvtag{C/C+}  \cvtag{Python} \cvtag{Javascript} \cvtag{Rust}
-            \cvtag{GDscript} \cvtag{UE4 C++} \cvtag{UE4 Blueprint} \\
-			Familiar: \cvtag{Java} \cvtag{Kotlin} \cvtag{Lua} \cvtag{Assembly} \cvtag{OpenGL} \cvtag{GLSL} \cvtag{LaTeX} \\
-            {\normalsize\textbf{Technologies: }}
-			\cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Godot} \cvtag{Unreal Engine}\\
-        \end{minipage}
+            \vspace{1em}
+            \section*{\textFocus{Software Development Skills}}
+            \begin{minipage}[t]{\textwidth}
+                \raggedright
+                {\normalsize\textbf{Programming Languages:}}\\
+                Proficient: \cvtag{C/C+}  \cvtag{Python} \cvtag{Javascript} \cvtag{Rust}
+                \cvtag{GDscript} \cvtag{UE4 C++} \cvtag{UE4 Blueprint} \\
+                Familiar: \cvtag{Java} \cvtag{Kotlin} \cvtag{Lua} \cvtag{Assembly} \cvtag{OpenGL} \cvtag{GLSL} \cvtag{LaTeX} \\
+                {\normalsize\textbf{Technologies: }}
+                \cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Godot} \cvtag{Unreal Engine}\\
+            \end{minipage}
 
-        \vspace{0pt}
-        \section*{\textFocus{Projects}}
-        \begin{tabular}{@{\raggedright}p{0.09\textwidth} |>{\raggedright\arraybackslash}p{0.8\textwidth}}
-            \cvdegree{2019}{Traitor's Arena}
+            \vspace{0pt}
+            \section*{\textFocus{Projects}}
+            \begin{tabular}{@{\raggedright}p{0.09\textwidth} |>{\raggedright\arraybackslash}p{0.8\textwidth}}
+                \cvdegree{2019}{Traitor's Arena}
                 {\faGitlab~ \href{https://gitlab.com/ducklin5/traitors-arena}{traitors-arena}}{GDscript}
                 {
                     \begin{tabitemize}
@@ -179,51 +178,50 @@
                         \item Built and integrated at least 3 core game mechanics including randomized map generation, dynamic actor switching and dynamic teaming
                         \item Optimized multiplayer performance using entity interpolation and lag compensation algorithms to reduce perceived latency from 50ms to 10ms
                     \end{tabitemize}
-                }\\
-            \cvdegree{2019}{Sudoku Solver}
+                } \\
+                \cvdegree{2019}{Sudoku Solver}
                 {\faGithub~ \href{https://github.com/ducklin5/idea3}{idea3}}{C++, OpenCV}
                 {
                     \begin{tabitemize}
                         \item Built a custom sudoku solver capable of solving variable sized puzzles
                         \item Used computer vision techniques to detect sudoku puzzles in images using OpenCV image processing library
                     \end{tabitemize}
-                }\\
-            \cvdegree{2018}{TweetHeat - Twitter Heat Map}
-            {\faGithub~ \href{https://github.com/HyperEpsilon/Tweet-Heat}{Tweet-Heat}}{JavaScript, Python, Flask}
+                } \\
+                \cvdegree{2018}{TweetHeat - Twitter Heat Map}
+                {\faGithub~ \href{https://github.com/HyperEpsilon/Tweet-Heat}{Tweet-Heat}}{JavaScript, Python, Flask}
                 {
                     \begin{tabitemize}
                         \item Collaborated in a team of 4 to build a web-based heat map of tweets using Leaflet and the Twitter API
-                        \item Won in Edmonton’s 2018 HackEd Beta Hackathon (20 teams)                        
+                        \item Won in Edmonton’s 2018 HackEd Beta Hackathon (20 teams)
                     \end{tabitemize}
-                }\\
-        \end{tabular}
+                } \\
+            \end{tabular}
 
-        \vspace{0pt}
-        \section*{\textFocus{Additional Information}}
-        {\raggedright
-        \begin{tabitemize}
-            \item Engineering Safety Course (CSTS) Completed 
-            \item Experience with 3D modeling in Blender and CAD in Fusion 360
-            \item Willing to relocate
-        \end{tabitemize}
-        }
-	\end{minipage}
+            \vspace{0pt}
+            \section*{\textFocus{Additional Information}}
+            {\raggedright
+            \begin{tabitemize}
+                \item Engineering Safety Course (CSTS) Completed
+                \item Experience with 3D modeling in Blender and CAD in Fusion 360
+                \item Willing to relocate
+            \end{tabitemize}
+            }
+        \end{minipage}
 
-\end{paracol}
+    \end{paracol}
 
+    \vspace{1em} % Whitespace before final footer
 
-\vspace{1em} % Whitespace before final footer
-
-%----------------------------------------------------------------------------------------
-%	FINAL FOOTER
-%----------------------------------------------------------------------------------------
-\setlength{\parindent}{0pt}
-\begin{minipage}[t]{\textwidth}
-\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-%{\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
-%\icon{\faAt}{black}{} \protect\url{aabass@ualberta.ca}
-%}
-\end{center}
-\end{minipage}
+    %----------------------------------------------------------------------------------------
+    %	FINAL FOOTER
+    %----------------------------------------------------------------------------------------
+    \setlength{\parindent}{0pt}
+    \begin{minipage}[t]{\textwidth}
+        \begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+            %{\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
+            %\icon{\faAt}{black}{} \protect\url{aabass@ualberta.ca}
+            %}
+        \end{center}
+    \end{minipage}
 
 \end{document}
