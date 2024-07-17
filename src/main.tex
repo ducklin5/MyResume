@@ -1,3 +1,5 @@
+% !TeX TS-program = lualatex
+
 \documentclass[a4paper]{modernsimplecv}
 % try out different fonts: classic, fira, raleway, chivo
 \usepackage[utf8]{inputenc}
@@ -49,7 +51,7 @@
         \Huge
         \begin{minipage}[t]{\textwidth}
             \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
-            \raisebox{.3ex}{\Large$\cdot$ Aspiring Graphics and Computer Vision Engineer}
+            \raisebox{.3ex}{\Large$\cdot$ Video Game and Web Software Engineer}
         \end{minipage}
         \vspace{10pt}
         \footnotesize
@@ -94,22 +96,25 @@
         \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
             \cvdegree
                 {2017--2022}
-                {Computer Engineering \newline (Software Option) Coop}
+                {Computer Engineering \newline (Software Option) Co-op}
                 {B.Sc.}
-                {University of Alberta}
-                {
-                    \begin{tabitemize}
-                    \item Completed Academic Terms: 7 of 8
-                    \item Completed Co-op Work Terms: 2
-                    \item Availablity from May 2021: 4 or 8 months
-                    \end{tabitemize}
-                }\\
+                {University of Alberta\newline}
+                {5 year program including 2 internships}\\
         \end{tabular}
 
         \vspace{-2pt}
         \section*{\textFocus{Work Experience}}
         
         \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+            \cvevent{May 2021\newline --Dec 2021}
+                {Associate Game Programmer Co-op}
+                {Improbable Canada (Inflexion Games)}{Edmonton}
+                {\begin{tabitemize}
+                    \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
+                    \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
+                    \item Refactored and improved old gameplay logic to meet new player inventory requirements
+                \end{tabitemize}   
+                }\\
             \cvevent{Jan 2020\newline --Aug 2020}
                 {Software Developer Co-op}
                 {Intuit}{Edmonton}
@@ -142,15 +147,6 @@
             %    Optics & Software Testing & Intro. to Tangible Comput. \\ 
             %\end{tabular}}
         %\end{shaded*}
-        \vspace{0pt}
-        \section*{\textFocus{Additional Information}}
-        {\raggedright
-        \begin{tabitemize}
-            \item Engineering Safety Course (CSTS) Completed 
-            \item Experience with 3D modeling in Blender and CAD in Fusion 360
-            \item Willing to relocate
-        \end{tabitemize}
-        }
         \vspace{1em}
     \end{minipage}
 
@@ -163,10 +159,10 @@
         \begin{minipage}[t]{\textwidth}
             \raggedright
             {\normalsize\textbf{Programming Languages:}}\\
-            Proficient: \cvtag{C/C++} \cvtag{Python} 
-            \cvtag{Javascript} \cvtag{Java} \cvtag{GDscript} \\
-            Familiar: \cvtag{MongoDB} \cvtag{SQLite} \cvtag{Assembly}
-            \cvtag{Rust} \cvtag{OpenGL} \cvtag{GLSL} 
+            Proficient: \cvtag{C/C+}  \cvtag{Python} \cvtag{Javascript} \cvtag{Rust}
+            \cvtag{GDscript} \cvtag{UE4 C++} \cvtag{UE4 Blueprint} \\
+            Familiar: \cvtag{Java} \cvtag{MongoDB} \cvtag{SQLite} \cvtag{Assembly}
+            \cvtag{OpenGL} \cvtag{GLSL} 
             \cvtag{LaTeX} \\
             {\normalsize\textbf{Frameworks: }}
             \cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Mockito}\\
@@ -202,20 +198,20 @@
                         \item Won in Edmonton’s 2018 HackEd Beta Hackathon (20 teams)                        
                     \end{tabitemize}
                 }\\
-            \cvdegree{2018}{MusicBoard}
-                {\faGithub~ \href{https://github.com/ducklin5/MusicBoard}{MusicBoard}}{C++, Python, PyGame}
-                {
-                    \begin{tabitemize}
-                        \item Collaborated in a team of 2 to design and build a 12 key Arduino piano keyboard 
-                        \item Developed a fully featured audio synthesis engine with Oscillators, Envelopes and Filters using NumPy and PyGame
-                        \item Integrated the Arduino hardware, synthesis engine and UI to construct the final real-time system 
-                    \end{tabitemize}
-                    \vspace{-\baselineskip}\mbox{}
-                }\\
-        
         \end{tabular}
+
+        \vspace{0pt}
+        \section*{\textFocus{Additional Information}}
+        {\raggedright
+        \begin{tabitemize}
+            \item Engineering Safety Course (CSTS) Completed 
+            \item Experience with 3D modeling in Blender and CAD in Fusion 360
+            \item Willing to relocate
+        \end{tabitemize}
+        }
     \end{minipage}
 \end{paracol}
+
 
 \vspace{1em} % Whitespace before final footer
 

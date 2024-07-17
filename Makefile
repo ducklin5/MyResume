@@ -1,5 +1,14 @@
+once:
+	cd src && lualatex --output-directory=../out/ --output-format=pdf main.tex
+	cp out/main.pdf Azeez_Abass_Resume.pdf
+
 watch:
-	nodemon -w main.tex -x "lualatex --output-format=pdf main.tex -interaction=batchmode"
+	nodemon -w src -x "make once"
 
 view:
-	evince main.pdf
+	evince ./out/main.pdf
+
+readme:
+	grip -b README.md
+
+@PHONY: once watch view readme
