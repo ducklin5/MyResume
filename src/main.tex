@@ -3,7 +3,7 @@
 \documentclass[a4paper]{modernsimplecv}
 % try out different fonts: classic, fira, raleway, chivo
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.5cm, a4paper]{geometry}
+\usepackage[margin=0.3cm, a4paper]{geometry}
 \usepackage{fontspec}
 \usepackage{enumitem}
 
@@ -46,32 +46,33 @@
 \node[rectangle, fill=white, anchor=north, minimum width=\paperwidth, minimum height=0cm](header) at (current page.north){};%
 }
 
+\vspace{-2em}
 \begin{minipage}[t]{1.0\textwidth}
-    \begin{shaded*}
-        \Huge
-        \begin{minipage}[t]{\textwidth}
-            \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
-            \raisebox{.3ex}{\Large$\cdot$ Software Engineer $\cdot$ Video Game and Web Developer}
-        \end{minipage}
-        \vspace{10pt}
-        \footnotesize
-        \begin{minipage}[t]{0.33\textwidth}
-            \vspace{0pt} % Trick for alignment
-            \faPhone~ +1 780 720 4606 \\
-            \faAt~ \url{aabass@ualberta.ca} \\
-        \end{minipage}
-        \begin{minipage}[t]{0.33\textwidth}
-            \vspace{0pt} % Trick for alignment
-            \faGlobe~ \url{https://azeez.me/} \\
-            \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
-        \end{minipage}
-        \begin{minipage}[t]{0.33\textwidth}
-            \vspace{0pt} % Trick for alignment
-            \faGithub~ \url{https://github.com/ducklin5/} \\
-            \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
-        \end{minipage}
-        \vspace{-2em}
-    \end{shaded*}
+\begin{shaded*}
+    \Huge
+    \begin{minipage}[t]{\textwidth}
+        \bfseries\FocusFont\textcolor{teal}{Azeez Abass}
+        \raisebox{.3ex}{\Large$\cdot$ Software Engineer $\cdot$ Video Game and Web Developer}
+    \end{minipage}
+    \vspace{10pt}
+    \footnotesize
+    \begin{minipage}[t]{0.33\textwidth}
+        \vspace{0pt} % Trick for alignment
+        \faPhone~ +1 780 720 4606 \\
+        \faAt~ \url{abassazeez6@gmail.com} \\
+    \end{minipage}
+    \begin{minipage}[t]{0.33\textwidth}
+        \vspace{0pt} % Trick for alignment
+        \faGlobe~ \url{https://azeez.me/} \\
+        \faLinkedin~ \url{https://linkedin.com/in/aabass/} \\
+    \end{minipage}
+    \begin{minipage}[t]{0.33\textwidth}
+        \vspace{0pt} % Trick for alignment
+        \faGithub~ \url{https://github.com/ducklin5/} \\
+        \faGitlab~ \url{https://gitlab.com/ducklin5/} \\
+    \end{minipage}
+    \vspace{-2em}
+\end{shaded*}
 \end{minipage}\\
 
 %------------------------------------------------------------------ Variablen
@@ -90,23 +91,25 @@
 \setlength{\columnsep}{0.03\textwidth}
 \small
 \begin{paracol}{2}
-    \begin{minipage}[t]{\leftcolwidth}
-        \vspace{1em}
-        \section*{\textFocus{Education}}
-        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-            \cvdegree
-                {2017--2022}
-                {Computer Engineering \newline (Software Option) Co-op}
-                {B.Sc.}
-                {University of Alberta\newline}
-                {5 year program including 2 internships}\\
-        \end{tabular}
+   
 
-        \vspace{-2pt}
+	\begin{minipage}[t]{\rightcolwidth}
+		
+        \vspace{1em}
         \section*{\textFocus{Work Experience}}
         
         \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
-            \cvevent{May 2021\newline --Dec 2021}
+            \cvevent{Jun 2022\newline --Sep 2024}
+                {Associate Game Programmer Co-op}
+                {Improbable Canada (Inflexion Games)}{Edmonton}
+                {\begin{tabitemize}
+                    \item Designed and implemented a project standard asynchronous asset loading system to improve memory performance of Inflexion's Nightingale
+                    \item Nativized core data structures and logic from Unreal Engine 4 Blueprint to C++ to improve gameplay performance and code readability
+                    \item Refactored and improved old gameplay logic to meet new player inventory requirements
+                \end{tabitemize}   
+                }\\
+
+			\cvevent{May 2021\newline --Dec 2021}
                 {Associate Game Programmer Co-op}
                 {Improbable Canada (Inflexion Games)}{Edmonton}
                 {\begin{tabitemize}
@@ -135,25 +138,24 @@
                 \vspace{-\baselineskip}\mbox{}
                 }
         \end{tabular}
-        %\end{shaded*}
-        %\begin{shaded*}
-            %\vspace{-1.5em}
-            %\section*{\textFocus{Relevant Coursework}}
-            %\newcolumntype{C}{>{\centering\arraybackslash}m{0.28\textwidth}}
-            %{\setlength{\extrarowheight}{4pt}%
-            %\begin{tabular}{CCC}
-            %    Calculus & Intro. to Software Engg &  Operating Systems \\
-            %    Linear Algebra & Software Requirements &  Games programing \\
-            %    Optics & Software Testing & Intro. to Tangible Comput. \\ 
-            %\end{tabular}}
-        %\end{shaded*}
         \vspace{1em}
-    \end{minipage}
-
+	\end{minipage}
+    
     %-----------------------------------------------------------
     \switchcolumn
 
-    \begin{minipage}[t]{\rightcolwidth}
+\begin{minipage}[t]{\leftcolwidth}
+        \vspace{1em}
+        \section*{\textFocus{Education}}
+        \begin{tabular}{@{\raggedright}p{0.19\textwidth} |>{\raggedright\arraybackslash}p{0.7\textwidth}}
+            \cvdegree
+                {2017--2022}
+                {Computer Engineering \newline (Software Option) Co-op}
+                {B.Sc.}
+                {University of Alberta\newline}
+                {5 year program including 2 internships}\\
+        \end{tabular}
+
         \vspace{1em}
         \section*{\textFocus{Software Development Skills}}
         \begin{minipage}[t]{\textwidth}
@@ -161,13 +163,9 @@
             {\normalsize\textbf{Programming Languages:}}\\
             Proficient: \cvtag{C/C+}  \cvtag{Python} \cvtag{Javascript} \cvtag{Rust}
             \cvtag{GDscript} \cvtag{UE4 C++} \cvtag{UE4 Blueprint} \\
-            Familiar: \cvtag{Java} \cvtag{MongoDB} \cvtag{SQLite} \cvtag{Assembly}
-            \cvtag{OpenGL} \cvtag{GLSL} 
-            \cvtag{LaTeX} \\
-            {\normalsize\textbf{Frameworks: }}
-            \cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Mockito}\\
-            {\normalsize\textbf{OS: }}
-            \cvtag{Windows} \cvtag{Arch Linux} \cvtag{Macintosh OS X}
+			Familiar: \cvtag{Java} \cvtag{Kotlin} \cvtag{Lua} \cvtag{Assembly} \cvtag{OpenGL} \cvtag{GLSL} \cvtag{LaTeX} \\
+            {\normalsize\textbf{Technologies: }}
+			\cvtag{React} \cvtag{Jest} \cvtag{Android} \cvtag{Godot} \cvtag{Unreal Engine}\\
         \end{minipage}
 
         \vspace{0pt}
@@ -209,7 +207,8 @@
             \item Willing to relocate
         \end{tabitemize}
         }
-    \end{minipage}
+	\end{minipage}
+
 \end{paracol}
 
 
