@@ -3,10 +3,12 @@
 
 %------- Packages
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.3cm, a4paper]{geometry}
+\usepackage[margin=0.3cm, a4paper, includefoot]{geometry}
 \usepackage{fontspec}
 \usepackage{enumitem}
 \usepackage{import}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
 
 %------- Colors
 \definecolor{teal}{RGB}{0, 128, 128}
@@ -16,21 +18,23 @@
 \setmainfont{montserrat} % or some other suitable font
 \urlstyle{same}
 \DeclareTextFontCommand{\textFocus}{\Large\FocusFont\bfseries\color{teal}}
+\DeclareTextFontCommand{\company}{\color{teal}}
 
 %------------------------------------------------------------------
 \title{Azeez's Resume}
 \author{\LaTeX{} Azeez}
 \date{December 2020}
 
-\pagestyle{empty}
 
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
+\pagestyle{fancy}
+\cfoot{\faFileTextO \space \thepage\ of \pageref{LastPage}}
+
 \begin{document}
-\thispagestyle{empty}
 %-------------------------------------------------------------
 
 \tikz[remember picture,overlay] {%
@@ -87,7 +91,10 @@
 
         \vspace{1em}
         \import{parts}{workexp2}
-
+ 
+        % \vspace{1em}
+        % \import{parts}{references}
+  
         \vspace{1em}
     \end{minipage}
 
