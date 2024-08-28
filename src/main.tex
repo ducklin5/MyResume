@@ -12,6 +12,15 @@
 
 %------- Colors
 \definecolor{teal}{RGB}{0, 128, 128}
+\definecolor{white}{RGB}{255, 255, 255}
+
+
+%---- Environments
+\newenvironment{whitebox}{%
+    \def\FrameCommand{\fboxrule=\FrameRule\fboxsep=\FrameSep \fcolorbox{white}{white}}%
+    \MakeFramed {\advance\hsize-\width \FrameRestore}
+}%
+{\endMakeFramed}
 
 %------- Fonts
 \newfontfamily\FocusFont{FiraSans}[]
@@ -43,7 +52,9 @@
 
     \vspace{-2em}
     \import{parts}{title}
-
+    \vspace{0.5em}
+    \import{parts}{summary}
+    
     %------------------------------------------------------------------ Variablen
     \newlength{\rightcolwidth}
     \newlength{\leftcolwidth}
@@ -55,50 +66,26 @@
 
     %------------------------------------------------
     \subsection*{}
-    \vspace{-4em}
+    \vspace{-5em}
 
     \setlength{\columnsep}{0.03\textwidth}
     \small
-    \begin{paracol}{2}
-        \begin{minipage}[t]{\rightcolwidth}
-            \vspace{1em}
-            \import{parts}{workexp1}
-        \end{minipage}
-        %-----------------------------------------------------------
-        \switchcolumn
-
-        \begin{minipage}[t]{\leftcolwidth}
-            \vspace{1em}
-
-            \import{parts}{education}
-
-            \vspace{1em}
-            \import{parts}{devskills}
-
-            \vspace{0pt}
-            \import{parts}{projects}
-
-            \vspace{0pt}
-            \import{parts}{additional}
-
-        \end{minipage}
-
-    \end{paracol}
-
-    \pagebreak
-
     \begin{minipage}[t]{\textwidth}
-
         \vspace{1em}
-        \import{parts}{workexp2}
- 
-        % \vspace{1em}
-        % \import{parts}{references}
-  
+        \import{parts}{education}
         \vspace{1em}
+        \import{parts}{devskills}
     \end{minipage}
+    
+    \import{parts}{workexp1}
+    
+    \pagebreak
+    
+    \import{parts}{workexp2}
 
-
+    \vspace{0pt}
+    \import{parts}{projects}
+    %-----------------------------------------------------------
 
     %----------------------------------------------------------------------------------------
     %	FINAL FOOTER
@@ -107,7 +94,7 @@
     \setlength{\parindent}{0pt}
     \begin{minipage}[t]{\textwidth}
         \begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
-            {\small Azeez Abass \icon{\faMapMarker}{black}{} Edmonton, Canada \icon{\faPhone}{black}{} +1 780 720 4606 
+            {\small Azeez Abass \icon{\faPhone}{black}{} +1 780 720 4606 
             \icon{\faAt}{black}{} \protect\url{abassazeez6@gmail.com}
             }
         \end{center}

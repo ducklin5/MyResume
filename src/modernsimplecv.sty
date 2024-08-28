@@ -59,7 +59,7 @@
  
 %------------------------
 \newcommand{\cvtag}[1]{% from alta-cv: https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv
-  \tikz[anchor=base, baseline]\node[draw=black,rounded corners,inner sep=0.3em]{\color{black}#1};
+  \tikz[anchor=base, baseline]\node[draw=black,rounded corners,inner sep=0.2em]{\color{black}#1};
 }
 
 
@@ -172,9 +172,11 @@
 {\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[5]{{#1} &  \textbf{#2}\newline\textbf{#3} $\cdot$ {#4} {#5}}
+\newcommand{\cvevent}[5]{{#1} &  {#2}\newline\textbf{#3} $\cdot$ {#4} {#5}}
 
 \newcommand{\cvdegree}[5]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4} {#5}}
+
+\newcommand{\cvproject}[4]{{#1} & {#2} $\cdot$ {#3} {#4}}
 
 
 
